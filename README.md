@@ -20,11 +20,25 @@ de configuracion se activa automaticamente.
 ```bash
 git clone https://github.com/juanlumanmx29/kroexus nombre-proyecto
 cd nombre-proyecto
+```
+
+Eliminar el historial de Git y reinicializar:
+
+En **Git Bash / macOS / Linux**:
+```bash
 rm -rf .git && git init
+```
+
+En **PowerShell (Windows)**:
+```powershell
+Remove-Item -Recurse -Force .git; git init
+```
+
+Luego abrir Claude Code y escribir `/init` para iniciar la entrevista de configuracion:
+```bash
 claude
 ```
 
-Al abrir Claude Code, escribe `/init` para iniciar la entrevista de configuracion.
 La entrevista genera la estructura del proyecto, el roadmap y los archivos base
 segun el stack elegido.
 
