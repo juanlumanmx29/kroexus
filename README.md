@@ -13,19 +13,11 @@ que se cumplan durante todo el ciclo de desarrollo.
 
 ## Instalacion
 
-Un solo comando desde la raiz de tu proyecto. Funciona en carpetas vacias
-(proyecto nuevo) y en proyectos con codigo existente.
+Una vez dentro de tu proyecto (carpeta vacia o con codigo existente), ejecuta
+en **Git Bash**:
 
-**Git Bash / macOS / Linux:**
 ```bash
-cd mi-proyecto
 curl -fsSL https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.sh | bash
-```
-
-**PowerShell (Windows):**
-```powershell
-cd mi-proyecto
-irm https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.sh | bash
 ```
 
 El script detecta automaticamente si es un proyecto nuevo o existente e instala
