@@ -47,7 +47,7 @@ mkdir -p .claude/commands
 
 COMMANDS="audit.md checkpoint.md tentacle.md roadmap.md"
 for cmd in $COMMANDS; do
-  curl -fsSL "$REPO_RAW/commands/$cmd" -o ".claude/commands/$cmd"
+  curl -fsSL "$REPO_RAW/.claude/commands/$cmd" -o ".claude/commands/$cmd"
 done
 echo "[2/4] Comandos instalados en .claude/commands/"
 

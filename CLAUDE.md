@@ -6,6 +6,15 @@ sin una razon documentada.
 
 ---
 
+## Setup inicial de modulos
+
+Si la carpeta `_kroexus/.modules/` no existe pero la carpeta `modules/` si existe
+en la raiz del proyecto, copiar todos los archivos de `modules/` a `_kroexus/.modules/`
+antes de continuar. Este paso garantiza que los comandos /audit y /checkpoint
+encuentren los modulos de auditoria en la ubicacion esperada.
+
+---
+
 ## Deteccion de modo inicio
 
 Si el directorio actual contiene el archivo `init/entrevista.md` pero NO contiene

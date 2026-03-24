@@ -31,8 +31,9 @@ Determinar que analizar segun el ultimo checkpoint:
 
 Para cada modulo:
 
-1. Leer las instrucciones del modulo desde `_kroexus/.modules/[NN]-[nombre].md`
-2. Si no existe en `_kroexus/.modules/`, buscar en `modules/` del repositorio Kroexus
+1. Leer las instrucciones del modulo. Buscar en este orden:
+   - `_kroexus/.modules/[NN]-[nombre].md` (proyectos con install.sh)
+   - `modules/[NN]-[nombre].md` (proyectos clonados directamente)
 3. Ejecutar los comandos de busqueda del modulo
 4. Filtrar resultados al alcance temporal definido (si aplica)
 5. Clasificar hallazgos por severidad

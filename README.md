@@ -78,6 +78,12 @@ kroexus/
 ├── CLAUDE.md              Reglas de comportamiento y normas tecnicas
 ├── README.md              Este archivo
 ├── install.sh             Script de instalacion para proyectos existentes
+├── .claude/
+│   └── commands/
+│       ├── audit.md       Comando /audit
+│       ├── checkpoint.md  Comando /checkpoint
+│       ├── tentacle.md    Comando /tentacle
+│       └── roadmap.md     Comando /roadmap
 ├── init/
 │   ├── entrevista.md      Entrevista de configuracion para proyectos nuevos
 │   └── stacks/
@@ -85,11 +91,6 @@ kroexus/
 │       ├── nextjs.md          Configuracion: Next.js fullstack
 │       ├── fastapi-only.md    Configuracion: solo FastAPI
 │       └── generic.md         Configuracion: estructura minima universal
-├── commands/
-│   ├── audit.md           Comando /audit
-│   ├── checkpoint.md      Comando /checkpoint
-│   ├── tentacle.md        Comando /tentacle
-│   └── roadmap.md         Comando /roadmap
 └── modules/
     ├── 00-resumen-ejecutivo.md
     ├── 01-arquitectura.md

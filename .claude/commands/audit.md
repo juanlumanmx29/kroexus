@@ -39,8 +39,9 @@ Ejecutar todos los modulos del 01 al 13 con estas excepciones:
 
 Para cada modulo seleccionado, en orden numerico (01, 02, 03, ..., 13):
 
-1. Leer el archivo de instrucciones del modulo desde `_kroexus/.modules/[NN]-[nombre].md`
-2. Si el archivo no existe en `_kroexus/.modules/`, buscar en la carpeta `modules/` del repositorio Kroexus
+1. Leer el archivo de instrucciones del modulo. Buscar en este orden:
+   - `_kroexus/.modules/[NN]-[nombre].md` (proyectos con install.sh)
+   - `modules/[NN]-[nombre].md` (proyectos clonados directamente)
 3. Seguir las instrucciones del modulo exactamente
 4. Ejecutar los comandos de busqueda especificados en "Que buscar"
 5. Analizar los resultados segun "Como analizar"
