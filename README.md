@@ -17,12 +17,14 @@ inicio de proyectos nuevos desde cero y auditoria de proyectos existentes.
 Clona el repositorio, elimina el historial de Git e inicia Claude Code. La entrevista
 de configuracion se activa automaticamente.
 
+Reemplaza `mi-proyecto` con el nombre real de tu proyecto:
+
 ```bash
-git clone https://github.com/juanlumanmx29/kroexus nombre-proyecto
-cd nombre-proyecto
+git clone https://github.com/juanlumanmx29/kroexus mi-proyecto
+cd mi-proyecto
 ```
 
-Eliminar el historial de Git y reinicializar:
+Eliminar el historial de Git de Kroexus y reinicializar como tu propio repositorio:
 
 En **Git Bash / macOS / Linux**:
 ```bash
@@ -34,7 +36,7 @@ En **PowerShell (Windows)**:
 Remove-Item -Recurse -Force .git; git init
 ```
 
-Luego abrir Claude Code y escribir `/init` para iniciar la entrevista de configuracion:
+Abrir Claude Code y escribir `/init` para iniciar la entrevista de configuracion:
 ```bash
 claude
 ```
