@@ -13,9 +13,14 @@ que se cumplan durante todo el ciclo de desarrollo.
 
 ## Instalacion
 
-Una vez dentro de tu proyecto (carpeta vacia o con codigo existente), ejecuta
-en **Git Bash**:
+Una vez dentro de tu proyecto (carpeta vacia o con codigo existente):
 
+**PowerShell (Windows):**
+```powershell
+irm https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.ps1 | iex
+```
+
+**Git Bash / macOS / Linux:**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.sh | bash
 ```
