@@ -48,7 +48,7 @@ echo "[1/5] CLAUDE.md descargado"
 
 mkdir -p .claude/commands
 
-COMMANDS="init.md audit.md checkpoint.md tentacle.md roadmap.md"
+COMMANDS="kroexus.md audit.md checkpoint.md tentacle.md roadmap.md"
 for cmd in $COMMANDS; do
   curl -fsSL "$REPO_RAW/.claude/commands/$cmd" -o ".claude/commands/$cmd"
 done
@@ -108,7 +108,7 @@ echo ""
 if [ "$MODE" = "nuevo" ]; then
   echo "Siguiente paso:"
   echo "  1. Abre Claude Code: claude"
-  echo "  2. Escribe: /init"
+  echo "  2. Escribe: /kroexus"
   echo "  3. Responde la entrevista de configuracion"
 else
   echo "Comandos disponibles en Claude Code:"

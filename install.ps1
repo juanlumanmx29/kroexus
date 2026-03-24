@@ -58,7 +58,7 @@ Write-Host "[1/5] CLAUDE.md descargado"
 
 # --- Comandos para Claude Code ---
 
-$commands = @("init.md", "audit.md", "checkpoint.md", "tentacle.md", "roadmap.md")
+$commands = @("kroexus.md", "audit.md", "checkpoint.md", "tentacle.md", "roadmap.md")
 foreach ($cmd in $commands) {
     Download-File "$REPO_RAW/.claude/commands/$cmd" ".claude/commands/$cmd"
 }
@@ -121,7 +121,7 @@ Write-Host ""
 if ($MODE -eq "nuevo") {
     Write-Host "Siguiente paso:"
     Write-Host "  1. Abre Claude Code: claude"
-    Write-Host "  2. Escribe: /init"
+    Write-Host "  2. Escribe: /kroexus"
     Write-Host "  3. Responde la entrevista de configuracion"
 } else {
     Write-Host "Comandos disponibles en Claude Code:"

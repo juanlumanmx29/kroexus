@@ -1,8 +1,8 @@
 ---
-description: Inicia la entrevista de configuracion para un proyecto nuevo
+description: Inicia la entrevista de configuracion de Kroexus para un proyecto nuevo
 ---
 
-# /init — Configuracion de proyecto nuevo
+# /kroexus — Configuracion de proyecto nuevo
 
 Leer el archivo `init/entrevista.md` y ejecutar la entrevista de configuracion
 paso a paso. Este comando se usa al crear un proyecto nuevo con Kroexus.
@@ -14,7 +14,8 @@ Si no existe, responder:
 
 ```
 No se encontro init/entrevista.md en el directorio actual.
-Verifica que clonaste el repositorio de Kroexus correctamente.
+Ejecuta el instalador de Kroexus primero:
+irm https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.ps1 | iex
 ```
 
 Si existe, leer el archivo completo y seguir todas sus instrucciones

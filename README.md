@@ -35,13 +35,13 @@ configuraciones ni rompe archivos existentes.
 
 ### Proyecto nuevo (carpeta vacia)
 
-Abre Claude Code y ejecuta `/init` para iniciar la entrevista de configuracion:
+Abre Claude Code y ejecuta `/kroexus` para iniciar la entrevista de configuracion:
 
 ```bash
 claude
 ```
 
-> Escribe `/init` y responde las preguntas. Kroexus genera la estructura del
+> Escribe `/kroexus` y responde las preguntas. Kroexus genera la estructura del
 > proyecto, el roadmap y los archivos base segun el stack que elijas.
 
 ### Proyecto existente (con codigo)
@@ -63,7 +63,7 @@ Una vez instalado, estos comandos estan disponibles en Claude Code:
 
 | Comando | Descripcion |
 |---------|-------------|
-| `/init` | Entrevista de configuracion para proyectos nuevos. Genera estructura, roadmap y archivos base. |
+| `/kroexus` | Entrevista de configuracion para proyectos nuevos. Genera estructura, roadmap y archivos base. |
 | `/audit` | Auditoria completa en 13 dimensiones. Genera reportes en `_kroexus/` con hallazgos clasificados por severidad. |
 | `/checkpoint` | Revision rapida de seguridad, dependencias y deuda tecnica. Muestra resultados en el chat. |
 | `/tentacle` | Genera repositorio template para desarrolladores externos con tokens de diseno y contratos de API. |
@@ -92,7 +92,7 @@ kroexus/
 ├── install.sh             Script de instalacion universal
 ├── .claude/
 │   └── commands/
-│       ├── init.md        Comando /init
+│       ├── kroexus.md     Comando /kroexus
 │       ├── audit.md       Comando /audit
 │       ├── checkpoint.md  Comando /checkpoint
 │       ├── tentacle.md    Comando /tentacle

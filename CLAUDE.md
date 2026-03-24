@@ -17,13 +17,13 @@ encuentren los modulos de auditoria en la ubicacion esperada.
 
 ## Modo inicio
 
-Si el usuario ejecuta el comando `/init`, leer el archivo `init/entrevista.md`
+Si el usuario ejecuta el comando `/kroexus`, leer el archivo `init/entrevista.md`
 y seguir sus instrucciones para configurar el proyecto nuevo.
 
 Si el usuario escribe cualquier mensaje y el directorio actual contiene
 `init/entrevista.md` pero NO contiene carpetas de codigo fuente (`src/`, `app/`,
 `lib/`, `backend/`, `frontend/`) ni archivos `.py`, `.ts`, `.tsx`, `.js`,
-sugerir al usuario que ejecute `/init` para comenzar la configuracion.
+sugerir al usuario que ejecute `/kroexus` para comenzar la configuracion.
 
 ---
 
@@ -112,7 +112,7 @@ Estas reglas aplican a todo codigo generado en cualquier proyecto.
 Una vez que Kroexus esta instalado en un proyecto, estos comandos estan disponibles
 en Claude Code:
 
-- `/init` — Inicia la entrevista de configuracion para proyectos nuevos.
+- `/kroexus` — Inicia la entrevista de configuracion para proyectos nuevos.
 
 - `/audit` — Auditoria completa del proyecto en las 13 dimensiones de Kroexus.
   Genera reportes detallados en `_kroexus/` y un resumen ejecutivo con el estado
