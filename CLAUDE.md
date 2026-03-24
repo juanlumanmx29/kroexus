@@ -15,18 +15,15 @@ encuentren los modulos de auditoria en la ubicacion esperada.
 
 ---
 
-## Deteccion de modo inicio
+## Modo inicio
 
-Si el directorio actual contiene el archivo `init/entrevista.md` pero NO contiene
-ninguna de las siguientes carpetas o archivos de codigo fuente:
+Si el usuario ejecuta el comando `/init`, leer el archivo `init/entrevista.md`
+y seguir sus instrucciones para configurar el proyecto nuevo.
 
-- Carpetas: `src/`, `app/`, `lib/`, `backend/`, `frontend/`
-- Archivos: `.py`, `.ts`, `.tsx`, `.js` fuera de archivos de configuracion
-  (se excluyen `next.config.*`, `tailwind.config.*`, `postcss.config.*`,
-  `vite.config.*`, `tsconfig.*`, `jest.config.*`, `eslint.config.*`)
-
-Entonces este es un proyecto nuevo. Leer `init/entrevista.md` y comenzar la
-entrevista de configuracion automaticamente sin esperar instrucciones del usuario.
+Si el usuario escribe cualquier mensaje y el directorio actual contiene
+`init/entrevista.md` pero NO contiene carpetas de codigo fuente (`src/`, `app/`,
+`lib/`, `backend/`, `frontend/`) ni archivos `.py`, `.ts`, `.tsx`, `.js`,
+sugerir al usuario que ejecute `/init` para comenzar la configuracion.
 
 ---
 
@@ -114,6 +111,8 @@ Estas reglas aplican a todo codigo generado en cualquier proyecto.
 
 Una vez que Kroexus esta instalado en un proyecto, estos comandos estan disponibles
 en Claude Code:
+
+- `/init` — Inicia la entrevista de configuracion para proyectos nuevos.
 
 - `/audit` — Auditoria completa del proyecto en las 13 dimensiones de Kroexus.
   Genera reportes detallados en `_kroexus/` y un resumen ejecutivo con el estado

@@ -24,9 +24,9 @@ rm -rf .git && git init
 claude
 ```
 
-Al abrir Claude Code, detecta que es un proyecto nuevo (no hay codigo fuente) y
-comienza la entrevista de configuracion. Esta entrevista genera la estructura del
-proyecto, el roadmap y los archivos base segun el stack elegido.
+Al abrir Claude Code, escribe `/init` para iniciar la entrevista de configuracion.
+La entrevista genera la estructura del proyecto, el roadmap y los archivos base
+segun el stack elegido.
 
 ---
 
@@ -52,6 +52,7 @@ Una vez instalado, estos comandos estan disponibles en Claude Code:
 
 | Comando | Descripcion |
 |---------|-------------|
+| `/init` | Inicia la entrevista de configuracion para un proyecto nuevo. Genera estructura, roadmap y archivos base. |
 | `/audit` | Auditoria completa en 13 dimensiones. Genera reportes en `_kroexus/` con hallazgos clasificados por severidad y un resumen ejecutivo. |
 | `/checkpoint` | Revision rapida de seguridad, dependencias y deuda tecnica. Muestra resultados en el chat sin generar archivos. |
 | `/tentacle` | Genera un repositorio template para desarrolladores externos con tokens de diseno, componentes y contratos de API. |
@@ -80,6 +81,7 @@ kroexus/
 ├── install.sh             Script de instalacion para proyectos existentes
 ├── .claude/
 │   └── commands/
+│       ├── init.md        Comando /init
 │       ├── audit.md       Comando /audit
 │       ├── checkpoint.md  Comando /checkpoint
 │       ├── tentacle.md    Comando /tentacle
