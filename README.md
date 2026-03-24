@@ -7,58 +7,56 @@ de auditoria que Claude Code lee y ejecuta automaticamente.
 
 No importa el stack tecnologico ni el tamano del equipo: Kroexus establece estandares
 claros de seguridad, calidad y arquitectura, y proporciona herramientas para verificar
-que se cumplan durante todo el ciclo de desarrollo. Tiene dos modos de operacion:
-inicio de proyectos nuevos desde cero y auditoria de proyectos existentes.
+que se cumplan durante todo el ciclo de desarrollo.
 
 ---
 
-## Modo 1: Proyecto nuevo
+## Instalacion
 
-Clona el repositorio, elimina el historial de Git e inicia Claude Code. La entrevista
-de configuracion se activa automaticamente.
+Un solo comando desde la raiz de tu proyecto. Funciona en carpetas vacias
+(proyecto nuevo) y en proyectos con codigo existente.
 
-Reemplaza `mi-proyecto` con el nombre real de tu proyecto:
-
+**Git Bash / macOS / Linux:**
 ```bash
-git clone https://github.com/juanlumanmx29/kroexus mi-proyecto
 cd mi-proyecto
+curl -fsSL https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.sh | bash
 ```
 
-Eliminar el historial de Git de Kroexus y reinicializar como tu propio repositorio:
-
-En **Git Bash / macOS / Linux**:
-```bash
-rm -rf .git && git init
-```
-
-En **PowerShell (Windows)**:
+**PowerShell (Windows):**
 ```powershell
-Remove-Item -Recurse -Force .git; git init
+cd mi-proyecto
+irm https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.sh | bash
 ```
 
-Abrir Claude Code y escribir `/init` para iniciar la entrevista de configuracion:
+El script detecta automaticamente si es un proyecto nuevo o existente e instala
+lo que corresponda. Es idempotente: ejecutarlo mas de una vez no duplica
+configuraciones ni rompe archivos existentes.
+
+---
+
+## Despues de instalar
+
+### Proyecto nuevo (carpeta vacia)
+
+Abre Claude Code y ejecuta `/init` para iniciar la entrevista de configuracion:
+
 ```bash
 claude
 ```
 
-La entrevista genera la estructura del proyecto, el roadmap y los archivos base
-segun el stack elegido.
+> Escribe `/init` y responde las preguntas. Kroexus genera la estructura del
+> proyecto, el roadmap y los archivos base segun el stack que elijas.
 
----
+### Proyecto existente (con codigo)
 
-## Modo 2: Proyecto existente
-
-Ejecuta el script de instalacion desde la raiz de tu proyecto. El script descarga
-los archivos necesarios y configura los comandos de Kroexus.
+Abre Claude Code y usa los comandos de auditoria:
 
 ```bash
-cd tu-proyecto
-curl -fsSL https://raw.githubusercontent.com/juanlumanmx29/kroexus/main/install.sh | bash
+claude
 ```
 
-El script es idempotente: ejecutarlo mas de una vez no duplica configuraciones ni
-rompe archivos existentes. Si ya existe un CLAUDE.md en el proyecto, se crea un
-respaldo automatico antes de reemplazarlo.
+> Escribe `/audit` para una auditoria completa o `/checkpoint` para una
+> revision rapida.
 
 ---
 
@@ -68,11 +66,11 @@ Una vez instalado, estos comandos estan disponibles en Claude Code:
 
 | Comando | Descripcion |
 |---------|-------------|
-| `/init` | Inicia la entrevista de configuracion para un proyecto nuevo. Genera estructura, roadmap y archivos base. |
-| `/audit` | Auditoria completa en 13 dimensiones. Genera reportes en `_kroexus/` con hallazgos clasificados por severidad y un resumen ejecutivo. |
-| `/checkpoint` | Revision rapida de seguridad, dependencias y deuda tecnica. Muestra resultados en el chat sin generar archivos. |
-| `/tentacle` | Genera un repositorio template para desarrolladores externos con tokens de diseno, componentes y contratos de API. |
-| `/roadmap` | Muestra el avance del proyecto por fases con porcentajes, items bloqueantes y recomendacion del proximo paso. |
+| `/init` | Entrevista de configuracion para proyectos nuevos. Genera estructura, roadmap y archivos base. |
+| `/audit` | Auditoria completa en 13 dimensiones. Genera reportes en `_kroexus/` con hallazgos clasificados por severidad. |
+| `/checkpoint` | Revision rapida de seguridad, dependencias y deuda tecnica. Muestra resultados en el chat. |
+| `/tentacle` | Genera repositorio template para desarrolladores externos con tokens de diseno y contratos de API. |
+| `/roadmap` | Muestra avance del proyecto por fases con porcentajes e items bloqueantes. |
 
 ---
 
@@ -94,7 +92,7 @@ el equipo tenga contexto de por que se hizo la excepcion.
 kroexus/
 ├── CLAUDE.md              Reglas de comportamiento y normas tecnicas
 ├── README.md              Este archivo
-├── install.sh             Script de instalacion para proyectos existentes
+├── install.sh             Script de instalacion universal
 ├── .claude/
 │   └── commands/
 │       ├── init.md        Comando /init
